@@ -47,9 +47,7 @@ The Kalman filter optimally combines two sources of information at each trial:
 - **Prediction** from state dynamics: *"Based on the previous state, where should the current state be?"*
 - **Observation** from the EEG: *"What does the current measurement tell us?"*
 
-The relative weighting is governed by the **Kalman gain**, which adapts based on the noise structure — trusting observations more when they are precise, and relying on the dynamical model when observations are noisy.
-
-The Rauch-Tung-Striebel (RTS) smoother extends this by incorporating future observations, yielding more accurate offline estimates suitable for post-hoc EEG analysis.
+The relative weighting is governed by the **Kalman gain**, which adapts based on the noise structure; trusting observations more when they are precise, and relying on the dynamical model when observations are noisy.
 
 ---
 
@@ -69,7 +67,7 @@ The Rauch-Tung-Striebel (RTS) smoother extends this by incorporating future obse
 | Estimated state (smoothed) | r = -0.714 | 50.9% |
 | True state (ground truth) | r = -0.806 | 65.0% |
 
-**Key finding**: Kalman smoothing recovers **+14.6 percentage points** of additional RT variance compared to raw EEG. This improvement arises from measurement error attenuation — removing observation noise reveals the underlying brain-behavior relationship more clearly.
+Kalman smoothing recovers **+14.6 percentage points** of additional RT variance compared to raw EEG. This improvement arises from measurement error attenuation — removing observation noise reveals the underlying brain-behavior relationship more clearly.
 
 ---
 
@@ -84,8 +82,6 @@ EEGpy/
 ├── plot_results.py       # Visualization: state recovery, scatter 
 └── README.md
 ```
-
-Each module is self-contained and can be run independently for testing (`python <module>.py`).
 
 ---
 
