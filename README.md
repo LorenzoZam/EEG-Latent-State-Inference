@@ -80,8 +80,8 @@ Kalman smoothing recovers **+14.6 percentage points** of additional RT variance 
 EEGpy/
 ├── main.py               # Entry point: runs the full pipeline with scientific commentary
 ├── simulate_data.py      # Generative model: latent state, EEG, and RT simulation
-├── kalman_filter.py      # Kalman filter (manual) + RTS smoother + pykalman wrapper
-├── analyze.py            # Statistical analysis: correlations, regression, autocorrelation
+├── kalman_filter.py      # Kalman filter 
+├── analyze.py            # Statistical analysis
 ├── plot_results.py       # Visualization: state recovery, scatter 
 └── README.md
 ```
