@@ -69,6 +69,9 @@ The relative weighting is governed by the **Kalman gain**, which adapts based on
 
 Kalman smoothing recovers **+14.6 percentage points** of additional RT variance compared to raw EEG. This improvement arises from measurement error attenuation — removing observation noise reveals the underlying brain-behavior relationship more clearly.
 
+![State Recovery](state_recovery.png)
+*Figure 1. Latent State Recovery from Noisy EEG. (A) The Kalman filter (red dashed line) successfully recovers the true latent neural state (blue solid line) from single-trial observations, achieving a high correlation (r = 0.892). (B) Raw EEG observations (gray) are heavily corrupted by measurement noise, obscuring the underlying dynamics. (C) Zoomed view demonstrating how the optimal filter smooths out observation noise to track the true underlying process.*
+
 ---
 
 ## Project Structure
