@@ -19,17 +19,17 @@ This project demonstrates the concept end-to-end: from generative model to infer
 The simulation follows a three-component linear generative model:
 
 ### 1. Latent Neural State (hidden)
-$$x_t = a \cdot x_{t-1} + \epsilon_t^{(process)}, \quad \epsilon_t^{(process)} \sim \mathcal{N}(0, \sigma_p^2)$$
+$$x_t = a \cdot x_{t-1} + \epsilon_t^{(process)}$$
 
 An AR(1) process representing a slowly fluctuating cognitive state (e.g., attentional readiness). The autoregressive parameter `a` (set to 0.9) controls temporal persistence — capturing the observation that brain states carry over across consecutive trials.
 
 ### 2. EEG Observation (measured)
-$$y_t = C \cdot x_t + \epsilon_t^{(obs)}, \quad \epsilon_t^{(obs)} \sim \mathcal{N}(0, \sigma_o^2)$$
+$$y_t = C \cdot x_t + \epsilon_t^{(obs)})$$
 
 The scalp-recorded EEG is modeled as a linear transformation of the latent state corrupted by observation noise (sensor noise, biological artifacts, unrelated neural activity).
 
 ### 3. Reaction Time (behavioral output)
-$$RT_t = b - d \cdot x_t + \epsilon_t^{(behav)}, \quad \epsilon_t^{(behav)} \sim \mathcal{N}(0, \sigma_b^2)$$
+$$RT_t = b - d \cdot x_t + \epsilon_t^{(behav)}$$
 
 Behavior depends on the **true** latent state, not on measurement noise. Higher neural readiness (larger $x_t$) leads to faster responses (lower RT). This asymmetry is the reason that noise-filtered estimates should predict behavior better than raw observations.
 
