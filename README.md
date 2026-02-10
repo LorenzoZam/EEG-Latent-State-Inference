@@ -82,7 +82,7 @@ EEGpy/
 ├── simulate_data.py      # Generative model: latent state, EEG, and RT simulation
 ├── kalman_filter.py      # Kalman filter 
 ├── analyze.py            # Statistical analysis
-├── plot_results.py       # Visualization: state recovery, scatter 
+├── plot_results.py       # Visualization: state recovery
 └── README.md
 ```
 
