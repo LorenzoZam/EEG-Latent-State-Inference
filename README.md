@@ -117,25 +117,6 @@ All model parameters are exposed in `main.py`. Modify these to explore different
 
 ---
 
-## Design Choices
-
-- **Manual Kalman implementation**: The filter is implemented from scratch (not just a library call) with step-by-step comments explaining predict and update equations, for full transparency.
-- **1D linear model**: Intentionally kept simple. The goal is conceptual clarity, not a production-ready analysis tool. The same principles extend to multivariate and nonlinear state-space models.
-- **Behavioral validation**: Since the true latent state is never observable in real experiments, RT serves as an independent proxy to validate that the estimated state captures something neurally meaningful beyond noise.
-
----
-
-## Extensions
-
-This project provides a foundation that naturally extends to:
-
-- **Parameter estimation** from data (EM algorithm, maximum likelihood) — removing the need to specify known parameters
-- **Multivariate observations** — multiple EEG channels or frequency bands mapped to a shared latent state
-- **Nonlinear dynamics** — Extended/Unscented Kalman filters or particle filters for more complex neural models
-- **Real EEG data** — applying the same framework to actual experimental recordings
-
----
-
 ## References
 
 - Harvey, A. C. (1989). *Forecasting, Structural Time Series Models and the Kalman Filter*. Cambridge University Press.
