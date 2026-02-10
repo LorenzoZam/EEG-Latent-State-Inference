@@ -24,7 +24,7 @@ $$x_t = a \cdot x_{t-1} + \epsilon_t^{(process)}$$
 An AR(1) process representing a slowly fluctuating cognitive state (e.g., attentional readiness). The autoregressive parameter `a` (set to 0.9) controls temporal persistence — capturing the observation that brain states carry over across consecutive trials.
 
 ### 2. EEG Observation (measured)
-$$y_t = C \cdot x_t + \epsilon_t^{(obs)})$$
+$$y_t = C \cdot x_t + \epsilon_t^{(obs)}$$
 
 The scalp-recorded EEG is modeled as a linear transformation of the latent state corrupted by observation noise (sensor noise, biological artifacts, unrelated neural activity).
 
